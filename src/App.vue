@@ -26,7 +26,9 @@ import { AXButton, AXGlobalStyle, AXRow } from '../lib';
         <div>
           Test002
         </div>
-        <AXButton >
+        <AXButton 
+          :disabled="false"
+        >
           Klick mich
         </AXButton>
       </AXRow>
