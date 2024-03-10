@@ -28,6 +28,9 @@ import { AXButton, AXGlobalStyle, AXRow } from '../lib';
         </div>
         <AXButton 
           :disabled="false"
+          :btnProps="{ 
+            filled: true 
+          }"
         >
           Klick mich
         </AXButton>
