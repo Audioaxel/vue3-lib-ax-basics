@@ -1,13 +1,15 @@
 import AXGlobalStyle from "./components/AXGlobalStyle.vue";
-import AXRow from "./components/basic/AXRow.vue";
+import AXGap from "./components/basic/AXGap.vue";
 import AXButton from "./components/basic/AXButton.vue";
 import AXGrid from "./components/basic/AXGrid.vue";
 import AXGridItem from "./components/basic/AXGridItem.vue";
+import AXBackgroundImage from "./components/basic/AXBackgroundImage.vue";
 
 export { 
   AXGlobalStyle, 
-  AXRow, 
+  AXGap, 
   AXButton,
   AXGrid,
-  AXGridItem
+  AXGridItem,
+  AXBackgroundImage,
 };

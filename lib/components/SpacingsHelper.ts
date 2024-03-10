@@ -1,19 +1,19 @@
-export type RowGapSize = 'tiny' | 'small' | 'medium' | 'large' | 'giant' | number;
+export type GapSize = 'tiny' | 'small' | 'medium' | 'large' | 'giant' | number;
 
 export class SpacingsHelper {
 
-  public static getRowGapSice(size?: RowGapSize): number {
+  public static getRowGapSice(size?: GapSize): number {
     switch (size) {
       case 'tiny':
         return 4;
       case 'small':
-        return 6;
+        return 8;
       case 'medium':
-        return 10;
-      case 'large':
         return 12;
+      case 'large':
+        return 24;
       case 'giant':
-        return 16;
+        return 36;
       default:
         if (typeof size === 'number') {
           return size;

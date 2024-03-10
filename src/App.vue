@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AXButton, AXGlobalStyle, AXRow, AXGrid, AXGridItem } from '../lib';
+import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage } from '../lib';
 </script>
 
 <template>
@@ -13,8 +13,8 @@ import { AXButton, AXGlobalStyle, AXRow, AXGrid, AXGridItem } from '../lib';
   </header>
   <div>
     <AXGlobalStyle>
-      <AXRow
-        :rowProps="{ 
+      <AXGap
+        :gapProps="{ 
           size: 'small', 
           justifyContent: 'center',
           vertical: false,
@@ -34,7 +34,7 @@ import { AXButton, AXGlobalStyle, AXRow, AXGrid, AXGridItem } from '../lib';
         >
           Klick mich
         </AXButton>
-      </AXRow>
+      </AXGap>
       <div style="margin-bottom: 24px;">
         Test00
       </div>
@@ -44,9 +44,9 @@ import { AXButton, AXGlobalStyle, AXRow, AXGrid, AXGridItem } from '../lib';
         :colMobile="2"
       >
         <AXGridItem :span="2">
-          <AXRow 
+          <AXGap 
             style="background-color: blue;"
-            :rowProps="{ 
+            :gapProps="{ 
               size: 'small', 
               justify: 'center',
               align: 'center',
@@ -55,7 +55,7 @@ import { AXButton, AXGlobalStyle, AXRow, AXGrid, AXGridItem } from '../lib';
           >
             <h1>TEST01 2000</h1>
             <h4>hidden</h4>
-          </AXRow>
+          </AXGap>
         </AXGridItem>
         <AXGridItem>
           <h1>TEST02</h1>
@@ -73,9 +73,9 @@ import { AXButton, AXGlobalStyle, AXRow, AXGrid, AXGridItem } from '../lib';
           <h1>TEST06</h1>
         </AXGridItem>
         <AXGridItem>
-          <AXRow 
+          <AXGap 
             style="background-color: blue;"
-            :rowProps="{ 
+            :gapProps="{ 
               size: 'small', 
               justify: 'center',
               align: 'center',
@@ -84,9 +84,49 @@ import { AXButton, AXGlobalStyle, AXRow, AXGrid, AXGridItem } from '../lib';
           >
             <h1>TEST01 2000</h1>
             <h4>hidden</h4>
-          </AXRow>
+          </AXGap>
         </AXGridItem>
       </AXGrid>
+      <div style="margin: 24px;">
+        Test00
+      </div>
+      <AXBackgroundImage
+        :bgImageProps="{ 
+          bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
+          bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
+          bgPosition: 'left top', 
+          bgFixed: false, 
+          minHeight: '100vh', 
+          hover: true,
+        }"
+      >
+        <AXGap
+          :gapProps="{ 
+            size: 'giant', 
+            justify: 'left',
+            align: 'center',
+            vertical: false,
+          }"
+        >
+          <h1>Test</h1>
+          <h1>Test</h1>
+        </AXGap>
+        <template #overlay>
+          <div style="background-color: rgba(255, 0, 0, 0.2); height: 100%;">
+            <AXGap
+              :gapProps="{ 
+                size: 'giant', 
+                justify: 'center',
+                align: 'center',
+                vertical: false,
+                fullHeight: true
+              }"
+            >
+              Test
+            </AXGap>
+          </div>
+        </template>
+      </AXBackgroundImage>
     </AXGlobalStyle>
   </div>
 </template>
