@@ -23,6 +23,20 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  background-color: var(--primary-white);
   font-family: var(--font-family);
+  color: var(--primary-black);
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--primary-white);
+}
+
+a {
+  color: var(--primary-color);
 }
 </style>
