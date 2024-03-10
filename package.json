@@ -1,0 +1,32 @@
+{
+  "name": "vue3-lib.components-ax",
+  "version": "0.0.1",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly -p tsconfig.lib.json",
+    "types": "vue-tsc ",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vue-tsc": "^1.8.27"
+  }
+}
