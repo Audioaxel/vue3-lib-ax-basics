@@ -1,12 +1,12 @@
 <template>
-  <div class="row">
+  <div class="gap">
     <slot name="default" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { GapSize, SpacingsHelper } from '../SpacingsHelper';
+import { GapSize, SizeHelper } from '../SizeHelper';
 
 export type GapProps = {
   size?: GapSize;
@@ -20,7 +20,7 @@ const props = defineProps<{
   gapProps?: GapProps;
 }>();
 
-const sizeCss = ref(SpacingsHelper.getRowGapSice(props.gapProps?.size));
+const sizeCss = ref(SizeHelper.getGapSice(props.gapProps?.size));
 const justifyContentCss = ref(props.gapProps?.justify || 'left');
 const alignCss = ref(props.gapProps?.align || 'start');
 const directionCss = ref(props.gapProps?.vertical ? 'column' : 'row');
@@ -28,7 +28,7 @@ const fullHeightCss = ref(props.gapProps?.fullHeight ? '100%' : 'auto');
 </script>
 
 <style scoped>
-.row {
+.gap {
   display: flex;
   flex-flow: wrap;
   flex-direction: v-bind(directionCss);
@@ -38,4 +38,4 @@ const fullHeightCss = ref(props.gapProps?.fullHeight ? '100%' : 'auto');
   width: 100%;
   height: v-bind(fullHeightCss);
 }
-</style>
+</style>../SizeHelper

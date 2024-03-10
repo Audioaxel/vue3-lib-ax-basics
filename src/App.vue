@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage } from '../lib';
+import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, AXSection } from '../lib';
 </script>
 
 <template>
@@ -13,46 +13,34 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage }
   </header>
   <div>
     <AXGlobalStyle>
-      <AXGap
-        :gapProps="{ 
-          size: 'small', 
-          justifyContent: 'center',
-          vertical: false,
-        }"
-      >
+      <AXGap :gapProps="{
+        size: 'small',
+        justifyContent: 'center',
+        vertical: false,
+      }">
         <div>
           Test001
         </div>
         <div>
           Test002
         </div>
-        <AXButton 
-          :disabled="false"
-          :btnProps="{ 
-            filled: true 
-          }"
-        >
+        <AXButton :disabled="false" :btnProps="{
+        filled: true
+      }">
           Klick mich
         </AXButton>
       </AXGap>
       <div style="margin-bottom: 24px;">
         Test00
       </div>
-      <AXGrid
-        :colDesktop="4"
-        :colTablet="3"
-        :colMobile="2"
-      >
+      <AXGrid :colDesktop="4" :colTablet="3" :colMobile="2">
         <AXGridItem :span="2">
-          <AXGap 
-            style="background-color: blue;"
-            :gapProps="{ 
-              size: 'small', 
-              justify: 'center',
-              align: 'center',
-              vertical: false,
-            }"  
-          >
+          <AXGap style="background-color: blue;" :gapProps="{
+        size: 'small',
+        justify: 'center',
+        align: 'center',
+        vertical: false,
+      }">
             <h1>TEST01 2000</h1>
             <h4>hidden</h4>
           </AXGap>
@@ -73,15 +61,12 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage }
           <h1>TEST06</h1>
         </AXGridItem>
         <AXGridItem>
-          <AXGap 
-            style="background-color: blue;"
-            :gapProps="{ 
-              size: 'small', 
-              justify: 'center',
-              align: 'center',
-              vertical: true,
-            }"  
-          >
+          <AXGap style="background-color: blue;" :gapProps="{
+        size: 'small',
+        justify: 'center',
+        align: 'center',
+        vertical: true,
+      }">
             <h1>TEST01 2000</h1>
             <h4>hidden</h4>
           </AXGap>
@@ -90,43 +75,58 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage }
       <div style="margin: 24px;">
         Test00
       </div>
-      <AXBackgroundImage
-        :bgImageProps="{ 
-          bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
-          bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
-          bgPosition: 'left top', 
-          bgFixed: false, 
-          minHeight: '100vh', 
-          hover: true,
-        }"
-      >
-        <AXGap
-          :gapProps="{ 
-            size: 'giant', 
-            justify: 'left',
-            align: 'center',
-            vertical: false,
-          }"
-        >
+      <AXBackgroundImage :bgImageProps="{
+        bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
+        bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
+        bgPosition: 'left top',
+        bgFixed: false,
+        minHeight: '100vh',
+        hover: true,
+      }">
+        <AXGap :gapProps="{
+        size: 'giant',
+        justify: 'left',
+        align: 'center',
+        vertical: false,
+      }">
           <h1>Test</h1>
           <h1>Test</h1>
         </AXGap>
         <template #overlay>
           <div style="background-color: rgba(255, 0, 0, 0.2); height: 100%;">
-            <AXGap
-              :gapProps="{ 
-                size: 'giant', 
-                justify: 'center',
-                align: 'center',
-                vertical: false,
-                fullHeight: true
-              }"
-            >
+            <AXGap :gapProps="{
+        size: 'giant',
+        justify: 'center',
+        align: 'center',
+        vertical: false,
+        fullHeight: true
+      }">
               Test
             </AXGap>
           </div>
         </template>
       </AXBackgroundImage>
+      <div style="margin: 24px;">
+        Test00
+      </div>
+      <AXSection
+        :label="'Test Section'"
+        :labelSize="'giant'"
+      >
+        <AXGap :gapProps="{
+            size: 'large',
+            justify: 'center',
+            align: 'center',
+            vertical: true,
+            fullHeight: true
+          }"
+          style="padding: 24px;"
+        >
+          <h4>Test Überschrift</h4>
+          <p>Section Test</p>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </AXGap>
+      </AXSection>
     </AXGlobalStyle>
   </div>
 </template>

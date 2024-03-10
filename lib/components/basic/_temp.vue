@@ -21,4 +21,6 @@ h1 {
   padding-top: 20%;
   transform: rotate(-5deg)skewX(-5deg);
 }
+
+/* p tag sollt ich machen */
 </style>
