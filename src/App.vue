@@ -156,12 +156,24 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, 
           bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
           bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_left.jpg',
           bgPosition: 'left top',   
-          hover: true,
         }"
       >
-        <AXCard>
-          Card Content
-        </AXCard>
+        <AXGap :gapProps="{
+            size: 'large',
+            justify: 'center',
+            align: 'center',
+            vertical: true,
+            fullHeight: true
+          }"
+          style="padding: 24px;"
+        >
+          <AXCard>
+            <template #overlay>
+              <h2>Card Title</h2>
+            </template>
+            Card Content
+          </AXCard>
+        </AXGap>
       </AXSection>
     </AXGlobalStyle>
   </div>
