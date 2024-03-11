@@ -17,21 +17,25 @@ import { SizeHelper, FontSize } from '../helper/SizeHelper';
 import { AXBackgroundImage, ThemeMode } from '../..';
 import { BackgroundImageProps } from '../basic/AXBackgroundImage.vue';
 import { ref } from 'vue';
+import { ColorHelper } from '../helper/ColorHelper';
+import { EColor } from '../enum/EColor';
 
 const props = defineProps<{
   label?: string;
   labelSize?: FontSize;
-  mode?: ThemeMode;
+  color?: EColor;
   minHeight?: string;
   bgImageProps?: BackgroundImageProps;
 }>()
 
 const labelSizeCss = ref(SizeHelper.getFontSize(props.labelSize, 'giant'));
+const colorCss = ref(ColorHelper.getColorAsCssVar(props.color));
 </script>
 
 <style scoped>
 section {
   min-height: v-bind(minHeight);
+  color: v-bind(colorCss);
 }
 
 h1 {

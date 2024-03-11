@@ -1,6 +1,19 @@
+import { EColor } from "../enum/EColor";
+
 export type HSLColor = { h: string, s: string, l: string };
 
 export class ColorHelper {
+
+  // TODO: so nicht... :/
+  public static getColorAsCssVar(color?: EColor): string {
+    switch (color) {
+      case EColor.Primary: return 'var(--primary-color)';
+      case EColor.Black: return 'var(--primary-black)';
+      case EColor.White: return 'var(--primary-white)';
+      default: return 'var(--primary-black)';
+    }
+  }
+
   public static hexToHsl(color: string): HSLColor {
     // Entferne das #-Zeichen, falls vorhanden
     color = color.replace('#', '');

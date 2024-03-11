@@ -1,5 +1,5 @@
 export enum EColor {
-	Main,
+	Primary,
   Black,
   White,
 }
