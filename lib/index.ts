@@ -21,3 +21,5 @@ export {
   
   AXSection
 };
+
+export type ThemeMode = "light" | "dark";

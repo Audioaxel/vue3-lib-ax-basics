@@ -5,13 +5,14 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { SizeHelper, FontSize } from '../helper/SizeHelper';
 
 const props = defineProps<{
   size?: FontSize;
 }>()
 
-const sizeCss = SizeHelper.getFontSize(props.size);
+const sizeCss = ref(SizeHelper.getFontSize(props.size));
 </script>
 
 <style scoped>

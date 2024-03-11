@@ -14,9 +14,9 @@
 
 <script setup lang="ts">
 import { SizeHelper, FontSize } from '../helper/SizeHelper';
-import { AXBackgroundImage } from '../..';
+import { AXBackgroundImage, ThemeMode } from '../..';
 import { BackgroundImageProps } from '../basic/AXBackgroundImage.vue';
-import { ThemeMode } from '../AXGlobalStyle.vue';
+import { ref } from 'vue';
 
 const props = defineProps<{
   label?: string;
@@ -26,7 +26,7 @@ const props = defineProps<{
   bgImageProps?: BackgroundImageProps;
 }>()
 
-const labelSizeCss = SizeHelper.getFontSize(props.labelSize, 'giant');
+const labelSizeCss = ref(SizeHelper.getFontSize(props.labelSize, 'giant'));
 </script>
 
 <style scoped>
