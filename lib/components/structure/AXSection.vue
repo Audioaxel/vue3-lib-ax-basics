@@ -1,15 +1,6 @@
 <template>
-  <section>
-    <AXBackgroundImage
-        :bgImageProps="{ 
-          bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
-          bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
-          bgPosition: 'left top', 
-          bgFixed: false, 
-          minHeight: '100vh', 
-          hover: true,
-        }"
-      >
+  <AXBackgroundImage :bgImageProps="bgImageProps">
+    <section>
       <div class="section-header">
         <h1>
           {{ label }}
@@ -17,18 +8,21 @@
       </div>
       <div class="divider" />
       <slot />
-    </AXBackgroundImage>
-  </section>
+    </section>
+  </AXBackgroundImage>
 </template>
 
 <script setup lang="ts">
-import { SizeHelper, FontSize } from '../SizeHelper';
+import { SizeHelper, FontSize } from '../helper/SizeHelper';
 import { AXBackgroundImage } from '../..';
 import { BackgroundImageProps } from '../basic/AXBackgroundImage.vue';
+import { ThemeMode } from '../AXGlobalStyle.vue';
 
 const props = defineProps<{
   label?: string;
   labelSize?: FontSize;
+  mode?: ThemeMode;
+  minHeight?: string;
   bgImageProps?: BackgroundImageProps;
 }>()
 
@@ -37,13 +31,7 @@ const labelSizeCss = SizeHelper.getFontSize(props.labelSize, 'giant');
 
 <style scoped>
 section {
-  /* display: flex;
-  flex-direction: column;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100vh;
-  color: v-bind(color); */
+  min-height: v-bind(minHeight);
 }
 
 h1 {
@@ -66,7 +54,8 @@ h1 {
 .divider {
   height: 1px;
   width: 80%;
-  margin: 0 auto; /* Automatische Seitenränder für horizontale Zentrierung */
+  margin: 0 auto;
+  /* Automatische Seitenränder für horizontale Zentrierung */
   background: currentColor;
 }
 
@@ -83,4 +72,4 @@ h1 {
     font-size: calc(v-bind(labelSizeCss) * 0.8);
   }
 }
-</style>
+</style>../helper/SizeHelper

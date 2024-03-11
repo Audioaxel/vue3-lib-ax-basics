@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { GapSize, SizeHelper } from '../SizeHelper';
+import { GapSize, SizeHelper } from '../helper/SizeHelper';
 
 export type GapProps = {
   size?: GapSize;
@@ -38,4 +38,4 @@ const fullHeightCss = ref(props.gapProps?.fullHeight ? '100%' : 'auto');
   width: 100%;
   height: v-bind(fullHeightCss);
 }
-</style>../SizeHelper
+</style>../SizeHelper../helper/SizeHelper

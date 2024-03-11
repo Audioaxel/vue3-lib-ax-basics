@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { h } from 'vue';
 import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, AXSection, AXText } from '../lib';
 </script>
 
@@ -27,8 +26,8 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, 
           Test002
         </div>
         <AXButton :disabled="false" :btnProps="{
-        filled: true
-      }">
+          filled: false,
+        }">
           Klick mich
         </AXButton>
       </AXGap>
@@ -114,6 +113,14 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, 
       <AXSection
         :label="'Test Section'"
         :labelSize="'giant'"
+        :minHeight="'100vh'"
+        :bgImageProps="{ 
+          bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
+          bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
+          bgPosition: 'left top', 
+          bgFixed: true,  
+          hover: true,
+        }"
       >
         <AXGap :gapProps="{
             size: 'large',

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { SizeHelper, FontSize } from '../SizeHelper';
+import { SizeHelper, FontSize } from '../helper/SizeHelper';
 
 const props = defineProps<{
   size?: FontSize;
@@ -18,4 +18,4 @@ const sizeCss = SizeHelper.getFontSize(props.size);
 p {
   font-size: v-bind(sizeCss);
 }
-</style>
+</style>../helper/SizeHelper
