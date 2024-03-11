@@ -14,12 +14,12 @@
 </template>
 
 <script setup lang="ts">
-import { SizeHelper, FontSize } from '../helper/SizeHelper';
-import { AXBackgroundImage, ThemeMode } from '../..';
+import { AXBackgroundImage } from '../..';
+import { EColor } from '../../enum/EColor';
+import { ColorHelper } from '../../helper/ColorHelper';
+import { FontSize, SizeHelper } from '../../helper/SizeHelper';
 import { BackgroundImageProps } from '../basic/AXBackgroundImage.vue';
 import { ref } from 'vue';
-import { ColorHelper } from '../helper/ColorHelper';
-import { EColor } from '../enum/EColor';
 
 const props = defineProps<{
   label?: string;
@@ -78,4 +78,4 @@ h1 {
     font-size: calc(v-bind(labelSizeCss) * 0.8);
   }
 }
-</style>../helper/SizeHelper
+</style>../helper/SizeHelper../../helper/SizeHelper../../helper/ColorHelper../../enum/EColor
