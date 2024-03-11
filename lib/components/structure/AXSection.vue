@@ -32,7 +32,7 @@ const props = defineProps<{
   bgImageProps?: BackgroundImageProps;
 }>()
 
-const labelSizeCss = SizeHelper.getFontSize(props.labelSize);
+const labelSizeCss = SizeHelper.getFontSize(props.labelSize, 'giant');
 </script>
 
 <style scoped>

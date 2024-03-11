@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, AXSection } from '../lib';
+import { h } from 'vue';
+import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, AXSection, AXText } from '../lib';
 </script>
 
 <template>
@@ -15,8 +16,9 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, 
     <AXGlobalStyle>
       <AXGap :gapProps="{
         size: 'small',
-        justifyContent: 'center',
+        align: 'center',
         vertical: false,
+
       }">
         <div>
           Test001
@@ -124,7 +126,16 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, 
         >
           <h4>Test Überschrift</h4>
           <p>Section Test</p>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <AXText :size="'large'" style="text-align: center;">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </AXText>
+          <h1 style="font-size: 2rem;">Headline h1</h1>
+          <h2>Headline h2</h2>
+          <h3>Headline h3</h3>
+          <h4>Headline h4</h4>
+          <h5>Headline h5</h5>
+          <h6>Headline h6</h6>
+          <p style="font-size: .5rem;">Paragraph</p>
         </AXGap>
       </AXSection>
     </AXGlobalStyle>

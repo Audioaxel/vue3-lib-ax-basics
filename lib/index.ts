@@ -1,5 +1,6 @@
 import AXGlobalStyle from "./components/AXGlobalStyle.vue";
 
+import AXText from "./components/basic/AXText.vue";
 import AXGap from "./components/basic/AXGap.vue";
 import AXButton from "./components/basic/AXButton.vue";
 import AXGrid from "./components/basic/AXGrid.vue";
@@ -11,6 +12,7 @@ import AXSection from "./components/structure/AXSection.vue";
 export { 
   AXGlobalStyle, 
 
+  AXText,
   AXGap, 
   AXButton,
   AXGrid,
