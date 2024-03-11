@@ -2,11 +2,12 @@
   <AXBackgroundImage :bgImageProps="bgImageProps">
     <section>
       <div class="section-header">
-        <h1>
+        <h1 v-if="label">
           {{ label }}
         </h1>
+        <slot name="header" />
       </div>
-      <div class="divider" />
+      <div class="divider" v-if="!hideDivider" />
       <slot />
     </section>
   </AXBackgroundImage>
@@ -23,6 +24,7 @@ import { EColor } from '../enum/EColor';
 const props = defineProps<{
   label?: string;
   labelSize?: FontSize;
+  hideDivider?: boolean;
   color?: EColor;
   minHeight?: string;
   bgImageProps?: BackgroundImageProps;
