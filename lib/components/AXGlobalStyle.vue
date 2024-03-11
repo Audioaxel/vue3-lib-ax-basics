@@ -4,14 +4,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-export type ThemeMode = 'light' | 'dark';
-
-const props = defineProps<{
-  
-}>()
-</script>
-
 <style>
 :root {
   --primary-color: #5b2843;
