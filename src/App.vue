@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, AXSection, AXText } from '../lib';
+import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, AXSection, AXText, AXCard } from '../lib';
 </script>
 
 <template>
@@ -144,6 +144,24 @@ import { AXButton, AXGlobalStyle, AXGap, AXGrid, AXGridItem, AXBackgroundImage, 
           <h6>Headline h6</h6>
           <p style="font-size: .5rem;">Paragraph</p>
         </AXGap>
+      </AXSection>
+      <div style="margin: 24px;">
+        Test00
+      </div>
+      <AXSection
+        :label="'Test Cards'"
+        :labelSize="'giant'"
+        :minHeight="'100vh'"
+        :bgImageProps="{ 
+          bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
+          bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_left.jpg',
+          bgPosition: 'left top',   
+          hover: true,
+        }"
+      >
+        <AXCard>
+          Card Content
+        </AXCard>
       </AXSection>
     </AXGlobalStyle>
   </div>
