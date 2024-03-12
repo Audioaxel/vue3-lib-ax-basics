@@ -1,5 +1,5 @@
 <template>
-  <div :class="{
+  <span :class="{
     'btn-container': true,
     'btn-container-clicked': buttonClicked
   }">
@@ -13,16 +13,14 @@
     >
       <slot></slot>
     </button>
-  </div>
+  </span>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
 export type ButtonProps = {
-  btnProps: {
-    filled?: boolean;
-  };
+  filled?: boolean;
 };
 
 const props = defineProps<{
@@ -121,6 +119,7 @@ button:disabled:hover {
   padding: 2px;
   border: 1px solid #3d6cb300;
   border-radius: 6px;
+  max-width: fit-content;
 }
 
 .btn-container-clicked {

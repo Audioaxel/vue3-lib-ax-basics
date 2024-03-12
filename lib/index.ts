@@ -14,6 +14,14 @@ import AXSection from "./components/structure/AXSection.vue";
 // presentation
 import AXCard from "./components/presentation/AXCard.vue";
 
+// types
+import BackgroundImageProps from "./components/basic/AXBackgroundImage.vue";
+import ButtonProps from "./components/basic/AXButton.vue";
+import GapProps from "./components/basic/AXGap.vue";
+
+// must not be exported seperately
+import { GapSize, FontSize }  from "./helper/SizeHelper";
+
 export { 
   AXGlobalStyle, 
 
@@ -27,6 +35,14 @@ export {
   AXSection,
 
   AXCard,
+
+  // types
+  BackgroundImageProps,
+  ButtonProps,
+  GapProps,
 };
 
+
+
+// mhhhh...
 export type ThemeMode = "light" | "dark";

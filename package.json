@@ -1,6 +1,6 @@
 {
-  "name": "vue3-lib.components-ax",
-  "version": "0.0.1",
+  "name": "vue3-lib.ax-basics",
+  "version": "0.0.3",
   "type": "module",
   "files": ["dist"],
   "main": "./dist/index.umd.cjs",
