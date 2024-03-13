@@ -17,8 +17,9 @@
 import { AXBackgroundImage } from '../..';
 import { EColor } from '../../enum/EColor';
 import { ColorHelper } from '../../helper/ColorHelper';
-import { FontSize, SizeHelper } from '../../helper/SizeHelper';
-import { BackgroundImageProps } from '../basic/AXBackgroundImage.vue';
+import type { FontSize } from '../../helper/SizeHelper';
+import { SizeHelper } from '../../helper/SizeHelper';
+import type { BackgroundImageProps } from '../basic/AXBackgroundImage.vue';
 import { ref } from 'vue';
 
 const props = defineProps<{

@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import AXGlobalStyle from '@lib/components/AXGlobalStyle.vue';
-import AXGap from '@lib/components/basic/AXGap.vue';
-
+import { AXBackgroundImage, AXButton, AXCard, AXGap, AXGlobalStyle, AXGrid, AXGridItem, AXSection, AXText } from 'lib';
 
 
 </script>
@@ -30,8 +28,8 @@ import AXGap from '@lib/components/basic/AXGap.vue';
           Test002
         </div>
         <AXButton :disabled="false" :btnProps="{
-          filled: false,
-        }">
+        filled: false,
+      }">
           Klick mich
         </AXButton>
       </AXGap>
@@ -114,31 +112,27 @@ import AXGap from '@lib/components/basic/AXGap.vue';
       <div style="margin: 24px;">
         Test00
       </div>
-      <AXSection
-        :label="'Test Section'"
-        :labelSize="'giant'"
-        :minHeight="'100vh'"
-        :bgImageProps="{ 
-          bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
-          bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
-          bgPosition: 'left top', 
-          bgFixed: true,  
-          hover: true,
-        }"
-      >
+      <AXSection :label="'Test Section'" :labelSize="'giant'" :minHeight="'100vh'" :bgImageProps="{
+        bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
+        bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
+        bgPosition: 'left top',
+        bgFixed: true,
+        hover: true,
+      }">
         <AXGap :gapProps="{
-            size: 'large',
-            justify: 'center',
-            align: 'center',
-            vertical: true,
-            fullHeight: true
-          }"
-          style="padding: 24px;"
-        >
+        size: 'large',
+        justify: 'center',
+        align: 'center',
+        vertical: true,
+        fullHeight: true
+      }" style="padding: 24px;">
           <h4>Test Überschrift</h4>
           <p>Section Test</p>
           <AXText :size="'large'" style="text-align: center;">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </AXText>
           <h1 style="font-size: 2rem;">Headline h1</h1>
           <h2>Headline h2</h2>
@@ -152,25 +146,18 @@ import AXGap from '@lib/components/basic/AXGap.vue';
       <div style="margin: 24px;">
         Test00
       </div>
-      <AXSection
-        :label="'Test Cards'"
-        :labelSize="'giant'"
-        :minHeight="'100vh'"
-        :bgImageProps="{ 
-          bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
-          bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_left.jpg',
-          bgPosition: 'left top',   
-        }"
-      >
+      <AXSection :label="'Test Cards'" :labelSize="'giant'" :minHeight="'100vh'" :bgImageProps="{
+        bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
+        bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_left.jpg',
+        bgPosition: 'left top',
+      }">
         <AXGap :gapProps="{
-            size: 'large',
-            justify: 'center',
-            align: 'center',
-            vertical: true,
-            fullHeight: true
-          }"
-          style="padding: 24px;"
-        >
+        size: 'large',
+        justify: 'center',
+        align: 'center',
+        vertical: true,
+        fullHeight: true
+      }" style="padding: 24px;">
           <AXCard>
             <template #overlay>
               <h2>Card Title</h2>

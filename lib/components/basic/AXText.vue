@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { FontSize, SizeHelper } from '../../helper/SizeHelper';
+import { type FontSize, SizeHelper } from '../../helper/SizeHelper';
 
 const props = defineProps<{
   size?: FontSize;

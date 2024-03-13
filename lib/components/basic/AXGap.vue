@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { GapSize, SizeHelper } from '../../helper/SizeHelper';
+import { type GapSize, SizeHelper } from '../../helper/SizeHelper';
 
 export type GapProps = {
   size?: GapSize;
