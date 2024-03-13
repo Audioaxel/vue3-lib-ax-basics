@@ -94,8 +94,7 @@ const gapSize: GapSize = 'small';
         bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
         bgPosition: 'left top',
         bgFixed: false,
-        minHeight: '100vh',
-        hover: true,
+        height: '100vh',
       }">
         <AXGap :gapProps="{
         size: 'giant',
@@ -103,6 +102,7 @@ const gapSize: GapSize = 'small';
         align: 'center',
         vertical: false,
       }">
+          <h1>Test</h1>
           <h1>Test</h1>
           <h1>Test</h1>
         </AXGap>
@@ -128,7 +128,6 @@ const gapSize: GapSize = 'small';
         bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_right.jpg',
         bgPosition: 'left top',
         bgFixed: true,
-        hover: true,
       }">
         <AXGap :gapProps="{
         size: 'large',
@@ -165,7 +164,6 @@ const gapSize: GapSize = 'small';
           bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
           bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_left.jpg',
           bgPosition: 'left top',
-          hover: true,
         }"
       >
         <template #overlay>
