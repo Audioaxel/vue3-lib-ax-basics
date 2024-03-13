@@ -64,7 +64,7 @@ const hoverOverlay = ref(props.bgImageProps?.hover ? '100%' : '0');
   transition: 0.5s ease-in-out;
 }
 
-.image-container:hover .image-overlay {
+.image-container:hover > .image-overlay {
   top: 0;
 }
 

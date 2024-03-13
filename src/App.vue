@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import AXGlobalStyle from '@lib/components/AXGlobalStyle.vue';
 import AXBackgroundImage from '@lib/components/basic/AXBackgroundImage.vue';
-import AXButton from '@lib/components/basic/AXButton.vue';
 import AXGap from '@lib/components/basic/AXGap.vue';
 import AXGrid from '@lib/components/basic/AXGrid.vue';
 import AXGridItem from '@lib/components/basic/AXGridItem.vue';
+import AXContentCenter from '@lib/components/basic/AXContentCenter.vue';
 import AXText from '@lib/components/basic/AXText.vue';
+import AXButton from '@lib/components/interactive/AXButton.vue';
+import AXHoverOverlay from '@lib/components/interactive/AXHoverOverlay.vue';
 import AXCard from '@lib/components/presentation/AXCard.vue';
 import AXSection from '@lib/components/structure/AXSection.vue';
 import type { GapSize } from '@lib/helper/SizeHelper';
@@ -155,24 +157,47 @@ const gapSize: GapSize = 'small';
       <div style="margin: 24px;">
         Test00
       </div>
-      <AXSection :label="'Test Cards'" :labelSize="'giant'" :minHeight="'100vh'" :bgImageProps="{
-        bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
-        bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_left.jpg',
-        bgPosition: 'left top',
-      }">
+      <AXSection 
+        :label="'Test Cards'" 
+        :labelSize="'giant'" 
+        :minHeight="'100vh'" 
+        :bgImageProps="{
+          bgImgLandscape: 'src/assets/img/backgound/landscape/bg-land-audiobird-pink_white_left.jpg',
+          bgImgPortrait: 'src/assets/img/backgound/portrait/bg-port-audiobird-pink_white_left.jpg',
+          bgPosition: 'left top',
+          hover: true,
+        }"
+      >
+        <template #overlay>
+          <h2>Section Title</h2>
+        </template>
         <AXGap :gapProps="{
-        size: 'large',
-        justify: 'center',
-        align: 'center',
-        vertical: true,
-        fullHeight: true
-      }" style="padding: 24px;">
+            size: 'large',
+            justify: 'center',
+            align: 'center',
+            vertical: true,
+            fullHeight: true
+          }"
+          style="padding: 24px;"
+        >
           <AXCard>
             <template #overlay>
               <h2>Card Title</h2>
             </template>
             Card Content
           </AXCard>
+          <AXHoverOverlay>
+            <template #overlay>
+              <AXContentCenter>
+                <h2>Card Title</h2>
+              </AXContentCenter>
+            </template>
+            <div style="height: 200px; width: 100px; background-color: rosybrown;">
+              <AXContentCenter>
+                Test
+              </AXContentCenter>
+            </div>
+          </AXHoverOverlay>
         </AXGap>
       </AXSection>
     </AXGlobalStyle>
