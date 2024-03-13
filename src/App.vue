@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import { AXBackgroundImage, AXButton, AXCard, AXGap, AXGlobalStyle, AXGrid, AXGridItem, AXSection, AXText } from 'lib';
+import AXGlobalStyle from '@lib/components/AXGlobalStyle.vue';
+import AXBackgroundImage from '@lib/components/basic/AXBackgroundImage.vue';
+import AXButton from '@lib/components/basic/AXButton.vue';
+import AXGap from '@lib/components/basic/AXGap.vue';
+import AXGrid from '@lib/components/basic/AXGrid.vue';
+import AXGridItem from '@lib/components/basic/AXGridItem.vue';
+import AXText from '@lib/components/basic/AXText.vue';
+import AXCard from '@lib/components/presentation/AXCard.vue';
+import AXSection from '@lib/components/structure/AXSection.vue';
+import type { GapSize } from '@lib/helper/SizeHelper';
 
-
+const gapSize: GapSize = 'small';
 </script>
 
 <template>

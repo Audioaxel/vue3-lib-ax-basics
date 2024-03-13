@@ -20,7 +20,7 @@ import ButtonProps from "./components/basic/AXButton.vue";
 import GapProps from "./components/basic/AXGap.vue";
 
 // must not be exported seperately
-import { GapSize, FontSize }  from "./helper/SizeHelper";
+// import { GapSize, FontSize }  from "./helper/SizeHelper";
 
 export { 
   AXGlobalStyle, 
