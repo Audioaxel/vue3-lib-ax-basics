@@ -1,19 +1,15 @@
 <template>
-  <span :class="{
-    'btn-container': true,
-    'btn-container-clicked': buttonClicked
-  }">
-    <button 
-      @mousedown="onMouseDown" 
-      @click="onClick" 
-      :disabled="disabled"
-      :class="{
-        'btn-filled': btnProps?.filled
-      }"
-    >
-      <slot></slot>
-    </button>
-  </span>
+  <button
+    @mousedown="onMouseDown" 
+    @click="onClick" 
+    :disabled="disabled"
+    :class="{
+      'btn-filled': btnProps?.filled,
+      'btn-clicked': buttonClicked
+    }"
+  >
+    <slot></slot>
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -55,6 +51,7 @@ button {
   border-radius: 3px;
   cursor: pointer;
   font-size: 1rem;
+  box-shadow: 0px 0px 1px 3px hsla(var(--primary-color-hsl), 0);
   transition: all 0.2s ease-in-out;
 }
 
@@ -115,34 +112,17 @@ button:disabled:hover {
     );
 }
 
-.btn-container {
-  padding: 2px;
-  border: 1px solid #3d6cb300;
-  border-radius: 6px;
-  max-width: fit-content;
-}
-
-.btn-container-clicked {
+.btn-clicked {
   animation: btnClicked 0.5s forwards;
 }
 
 @keyframes btnClicked {
-  0% {
-    border: 1px solid hsla(var(--primary-color-hsl), 0);
-    border-radius: 6px;
-    box-shadow: none;
-  }
   10% {
-    border: 1px solid hsla(var(--primary-color-hsl), 0.2);
-    border-radius: 6px;
-    box-shadow:
-      0px 0px 1px 3px hsla(var(--primary-color-hsl), .2) inset;
+    box-shadow: 0px 0px 1px 3px hsla(var(--primary-color-hsl), .2);
   }
 
   100% {
-    border: 1px solid hsla(var(--primary-color-hsl), 0);
-    border-radius: 6px;
-    box-shadow: none;
+    box-shadow: 0px 0px 1px 3px hsla(var(--primary-color-hsl), 0);
   }
 }
 </style>
