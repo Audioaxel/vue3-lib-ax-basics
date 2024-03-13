@@ -1,10 +1,14 @@
-import { defineConfig } from "vite";
+import { fileURLToPath, URL } from 'node:url'
 import { resolve } from "path";
-import vue from "@vitejs/plugin-vue";
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+  ],
   build: {
     lib: {
       // src/indext.ts is where we have exported the component(s)
@@ -26,4 +30,11 @@ export default defineConfig({
       },
     },
   },
-});
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@lib': fileURLToPath(new URL('./lib', import.meta.url)),
+      
+    }
+  }
+})

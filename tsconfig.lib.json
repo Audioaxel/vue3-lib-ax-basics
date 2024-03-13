@@ -27,5 +27,7 @@
   "include": [
     "lib/**/*.ts", "lib/**/*.tsx", "lib/**/*.vue",
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": [
+    "public/**/*",
+  ]
 }
