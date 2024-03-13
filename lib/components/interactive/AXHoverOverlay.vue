@@ -43,7 +43,6 @@ const disableHoverOverlay = computed(() => {
   height: 100%;
   overflow: hidden;
   transition: 0.5s ease-in-out;
-  background-color: rgba(255, 0, 0, 0.5);
 }
 
 .overlay-container:hover .hover-overlay {

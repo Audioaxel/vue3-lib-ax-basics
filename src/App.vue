@@ -11,6 +11,7 @@ import AXHoverOverlay from '@lib/components/interactive/AXHoverOverlay.vue';
 import AXCard from '@lib/components/presentation/AXCard.vue';
 import AXSection from '@lib/components/structure/AXSection.vue';
 import type { GapSize } from '@lib/helper/SizeHelper';
+import AXTitle from '@lib/components/basic/AXTitle.vue';
 
 const gapSize: GapSize = 'small';
 </script>
@@ -138,7 +139,7 @@ const gapSize: GapSize = 'small';
       }" style="padding: 24px;">
           <h4>Test Überschrift</h4>
           <p>Section Test</p>
-          <AXText :size="'large'" style="text-align: center;">
+          <AXText :size="'medium'" style="text-align: center;">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
             dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
             clita
@@ -178,12 +179,36 @@ const gapSize: GapSize = 'small';
           }"
           style="padding: 24px;"
         >
-          <AXCard>
-            <template #overlay>
-              <h2>Card Title</h2>
+
+
+          <AXCard
+            :bgImageProps="{
+              bgImgLandscape: 'src/assets/img/backgound/bg_larks_right_grey.jpg',
+              bgPosition: 'left top',
+            }"
+            style="width: 200px; height: 400px;"
+          >
+            <template #imageContent>
+              <AXContentCenter 
+                :style="{
+                  height: '200px',
+                  padding: '24px',
+                  color: 'var(--primary-color)'
+                }"
+              >
+                <AXTitle :size="'large'" mode="fancy">
+                  Card Title
+                </AXTitle>
+              </AXContentCenter>
             </template>
-            Card Content
+            <AXContentCenter>
+              <AXText :size="'medium'">
+                Card Image
+              </AXText>
+            </AXContentCenter>
           </AXCard>
+
+
           <AXHoverOverlay>
             <template #overlay>
               <AXContentCenter>

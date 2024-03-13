@@ -19,4 +19,4 @@ const sizeCss = ref(SizeHelper.getFontSize(props.size));
 p {
   font-size: v-bind(sizeCss);
 }
-</style>../helper/SizeHelper../../helper/SizeHelper
+</style>

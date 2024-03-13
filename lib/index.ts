@@ -3,6 +3,7 @@ import AXGlobalStyle from "./components/AXGlobalStyle.vue";
 // basic
 import AXContentCenter from "./components/basic/AXContentCenter.vue";
 import AXText from "./components/basic/AXText.vue";
+import AXTitle from "./components/basic/AXTitle.vue";
 import AXGap from "./components/basic/AXGap.vue";
 import AXGrid from "./components/basic/AXGrid.vue";
 import AXGridItem from "./components/basic/AXGridItem.vue";
@@ -30,6 +31,7 @@ export {
   AXContentCenter,
   AXGlobalStyle, 
   AXText,
+  AXTitle,
   AXGap, 
   AXButton,
   AXGrid,

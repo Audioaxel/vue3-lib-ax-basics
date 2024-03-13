@@ -29,7 +29,7 @@ const props = defineProps<{
   color?: EColor;
   minHeight?: string;
   bgImageProps?: BackgroundImageProps;
-}>()
+}>();
 
 const labelSizeCss = ref(SizeHelper.getFontSize(props.labelSize, 'giant'));
 const colorCss = ref(ColorHelper.getColorAsCssVar(props.color));
@@ -79,4 +79,4 @@ h1 {
     font-size: calc(v-bind(labelSizeCss) * 0.8);
   }
 }
-</style>../helper/SizeHelper../../helper/SizeHelper../../helper/ColorHelper../../enum/EColor
+</style>
