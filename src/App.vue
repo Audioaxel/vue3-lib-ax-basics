@@ -196,6 +196,7 @@ const gapSize: GapSize = 'small';
               bgImgLandscape: 'src/assets/img/backgound/bg_larks_right_grey.jpg',
               bgPosition: 'left top',
             }"
+            :imageRatio="1.5"
             style="width: 200px; height: 400px;"
           >
             <template #imageContent>

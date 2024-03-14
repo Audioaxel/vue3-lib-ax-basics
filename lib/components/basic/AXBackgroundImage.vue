@@ -35,6 +35,7 @@ const heightCss = ref(props.bgImageProps?.height ?? 0);
   background-position: v-bind(bgPositionCss);
   background-attachment: v-bind(bgAttachedCss);
   background-size: cover;
+  object-fit: cover; /* ToDo: Check das mal aus */
 }
 
 /*  Orientation portrait */
