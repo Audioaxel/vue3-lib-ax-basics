@@ -28,6 +28,7 @@ const directionCss = ref(props.direction ? props.direction : 'column');
 .card-container {
   display: flex;
   flex-direction: v-bind(directionCss);
+  height: 400px;
   border-radius: 12px;
   overflow: hidden;
   /* Um abgerundete Kanten zu ermöglichen */
@@ -48,6 +49,4 @@ const directionCss = ref(props.direction ? props.direction : 'column');
   overflow: hidden;
   background-color: violet;
 }
-
-
 </style>
