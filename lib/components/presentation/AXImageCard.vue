@@ -6,39 +6,32 @@
     <div class = "content-item">
       <slot />
     </div>
-
-    <!-- <div class="base-card">
-      <AXBackgroundImage 
-        :bgImageProps="bgImageProps"
-      >
-        <slot name="imageContent"/>
-      </AXBackgroundImage>
-      <slot />
-    </div> -->
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import AXBackgroundImage, { type BackgroundImageProps } from '../basic/AXBackgroundImage.vue';
+import { type BackgroundImageProps } from '../basic/AXBackgroundImage.vue';
 
 const props = defineProps<{
   bgImageProps?: BackgroundImageProps;
   imageRatio?: number;
+  direction?: 'row' | 'column';
 }>();
 
 const imageRationCss = ref(props.imageRatio ? props.imageRatio : 1);
+const directionCss = ref(props.direction ? props.direction : 'column');
 
 </script>
 
 <style scoped>
 .card-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: v-bind(directionCss);
   border-radius: 12px;
   overflow: hidden;
   /* Um abgerundete Kanten zu ermöglichen */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px hsla(var(--primary-black-hsl), 0.2);;
   /* Schatten für den Card-Effekt */
 }
 

@@ -16,6 +16,16 @@
   --primary-color-l: 25%;
   --primary-color-hsl: var(--primary-color-h), var(--primary-color-s), var(--primary-color-l);
 
+  --primary-white-h: 0;
+  --primary-white-s: 0%;
+  --primary-white-l: 98%;
+  --primary-white-hsl: var(--primary-white-h), var(--primary-white-s), var(--primary-white-l);
+
+  --primary-black-h: 0;
+  --primary-black-s: 0%;
+  --primary-black-l: 12%;
+  --primary-black-hsl: var(--primary-black-h), var(--primary-black-s), var(--primary-black-l);
+
   --font-family: 'Cascadia Code', 'Courier New', monospace;
 }
 

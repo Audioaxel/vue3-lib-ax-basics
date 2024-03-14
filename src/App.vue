@@ -197,12 +197,11 @@ const gapSize: GapSize = 'small';
               bgPosition: 'left top',
             }"
             :imageRatio="1.5"
-            style="width: 200px; height: 400px;"
+            :direction="'row'"
           >
             <template #imageContent>
               <AXContentCenter 
                 :style="{
-                  height: '200px',
                   padding: '24px',
                   color: 'var(--primary-color)'
                 }"
@@ -214,7 +213,7 @@ const gapSize: GapSize = 'small';
             </template>
             <AXContentCenter>
               <AXText :size="'medium'">
-                Card Image
+                Card Content
               </AXText>
             </AXContentCenter>
           </AXImageCard>
