@@ -8,7 +8,7 @@ import AXContentCenter from '@lib/components/basic/AXContentCenter.vue';
 import AXText from '@lib/components/basic/AXText.vue';
 import AXButton from '@lib/components/interactive/AXButton.vue';
 import AXHoverOverlay from '@lib/components/interactive/AXHoverOverlay.vue';
-import AXCard from '@lib/components/presentation/AXCard.vue';
+import AXImageCard from '@lib/components/presentation/AXImageCard.vue';
 import AXSection from '@lib/components/structure/AXSection.vue';
 import type { GapSize } from '@lib/helper/SizeHelper';
 import AXTitle from '@lib/components/basic/AXTitle.vue';
@@ -191,7 +191,7 @@ const gapSize: GapSize = 'small';
         >
 
 
-          <AXCard
+          <AXImageCard
             :bgImageProps="{
               bgImgLandscape: 'src/assets/img/backgound/bg_larks_right_grey.jpg',
               bgPosition: 'left top',
@@ -217,7 +217,7 @@ const gapSize: GapSize = 'small';
                 Card Image
               </AXText>
             </AXContentCenter>
-          </AXCard>
+          </AXImageCard>
 
 
           <AXHoverOverlay>

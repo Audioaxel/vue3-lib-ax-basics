@@ -17,7 +17,7 @@ import AXHoverOverlay from "./components/interactive/AXHoverOverlay.vue";
 import AXSection from "./components/structure/AXSection.vue";
 
 // presentation
-import AXCard from "./components/presentation/AXCard.vue";
+import AXImageCard from "./components/presentation/AXImageCard.vue";
 
 // types
 import BackgroundImageProps from "./components/basic/AXBackgroundImage.vue";
@@ -38,7 +38,7 @@ export {
   AXGridItem,
   AXBackgroundImage, 
   AXSection,
-  AXCard,
+  AXImageCard,
   AXHoverOverlay,
 
   // types
