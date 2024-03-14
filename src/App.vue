@@ -40,8 +40,18 @@ const gapSize: GapSize = 'small';
           Test002
         </div>
         <AXButton :disabled="false" :btnProps="{
-        filled: false,
-      }">
+          filled: false,
+        }">
+          Klick mich
+        </AXButton>
+        <AXButton :disabled="true" :btnProps="{
+          filled: true,
+        }">
+          Klick mich
+        </AXButton>
+        <AXButton :disabled="false" :btnProps="{
+          filled: true,
+        }">
           Klick mich
         </AXButton>
       </AXGap>

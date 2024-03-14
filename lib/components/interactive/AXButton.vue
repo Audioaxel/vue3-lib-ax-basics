@@ -77,6 +77,16 @@ button:hover {
     );
 }
 
+button:active {
+  background-color: 
+    hsla(
+      var(--primary-color-h), 
+      var(--primary-color-s), 
+      calc(var(--primary-color-l) - 3%), 
+      1
+    );
+}
+
 button:disabled {
   background-color: 
     hsla(
