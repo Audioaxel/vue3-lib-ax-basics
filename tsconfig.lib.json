@@ -25,6 +25,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
+    "vue.d.ts",
     "lib/**/*.ts", "lib/**/*.tsx", "lib/**/*.vue",
   ],
   "exclude": [
