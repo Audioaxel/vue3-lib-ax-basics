@@ -1,6 +1,6 @@
 {
   "name": "vue3-lib-ax-basics",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "dist"
